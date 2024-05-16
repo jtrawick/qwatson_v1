@@ -20,7 +20,7 @@ import arrow
 
 # Migrate to PySide6
 from PySide6.QtCore import Signal as QSignal
-from PySide6.QtCore import QAbstractTableModel, QModelIndex, QSortFilterProxyModel, Qt, QVariant
+from PySide6.QtCore import QAbstractTableModel, QModelIndex, QSortFilterProxyModel, Qt          #, QVariant # <-- QVariant was removed in PySide6
 
 # ---- Local imports
 
@@ -108,7 +108,8 @@ class WatsonTableModel(QAbstractTableModel):
             else:
                 return Qt.AlignCenter
         else:
-            return QVariant()
+            # return QVariant()        # <-- QVariant was removed in PySide6, any python object can be returned
+            return None
 
     def headerData(self, section, orientation, role):
         """Qt method override."""
@@ -117,7 +118,8 @@ class WatsonTableModel(QAbstractTableModel):
         if role == Qt.DisplayRole and orientation == Qt.Vertical:
             return section
         else:
-            return QVariant()
+            # return QVariant()         # <-- QVariant was removed in PySide6, any python object can be returned
+            return None
 
     def flags(self, index):
         """Qt method override."""

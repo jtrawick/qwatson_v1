@@ -26,7 +26,7 @@ import arrow
 
 from PySide6.QtCore import Signal as QSignal
 from PySide6.QtCore import Qt, QPoint
-from PySide6.QtWidgets import QApplication, QGridLayout, QHeaderView, QLabel, QMessageBox, QScrollArea, QTableView, QHBoxLayout, QVBoxLayout, QWidget, QFrame
+from PySide6.QtWidgets import QApplication, QGridLayout, QHeaderView, QLabel, QMessageBox, QScrollArea, QTableView, QHBoxLayout, QVBoxLayout, QWidget, QFrame, QAbstractItemView
 from PySide6.QtGui import QCursor
 
 
@@ -554,8 +554,10 @@ class FormatedWatsonTableView(BasicWatsonTableView):
         self.setWordWrap(False)
 
         self.setMouseTracking(True)
-        self.setSelectionBehavior(self.SelectRows)
-        self.setSelectionMode(self.SingleSelection)
+        # self.setSelectionBehavior(self.SelectRows)
+        self.setSelectionBehavior(QAbstractItemView.SelectRows)
+        # self.setSelectionMode(self.SingleSelection)
+        self.setSelectionMode(QAbstractItemView.SingleSelection)
         self.set_selected(False)
 
         self.horizontalHeader().hide()

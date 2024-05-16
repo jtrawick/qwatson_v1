@@ -36,8 +36,12 @@ def get_qcolor(*args):
             return QColor(args[0])
 
         try:
-            return getattr(QStyleOption().palette, args[0])().color()
+            # return getattr(QStyleOption().palette, args[0])().color()
+            qstyle_option_obj = QStyleOption()
+            return qstyle_option_obj.palette.__getattribute__(args[0])().color()        # <-- Kind of hacky, but it seems to work
         except AttributeError:
+            pass
+        except ValueError:              # This breaks because the palette object has been deleted at this point in PySide6
             pass
 
     raise ValueError("The provided color argument is not valid")

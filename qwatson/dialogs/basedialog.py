@@ -56,7 +56,9 @@ class BaseDialog(ColoredFrame):
         button_box.layout().setContentsMargins(5, 10, 5, 10)
         button_box.setAutoFillBackground(True)
 
-        color = QStyleOption().palette.window().color()
+        # color = QStyleOption().palette.window().color()
+        qstyle_option_obj = QStyleOption()
+        color = qstyle_option_obj.palette.window().color()        # <-- Kind of hacky, but it seems to work because Qt deletes if not stored in a variable
         palette = button_box.palette()
         palette.setColor(button_box.backgroundRole(), color)
         button_box.setPalette(palette)

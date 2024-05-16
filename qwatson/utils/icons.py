@@ -65,7 +65,7 @@ def get_icon(name):
         args, kwargs = FA_ICONS[name]
         # Disable qtawesome for now
         # return qta.icon(*args, **kwargs)
-        return None
+        return QIcon(None)
     elif name in APP_ICONS:
         return QIcon(os.path.join(DIRNAME, APP_ICONS[name]))
     else:

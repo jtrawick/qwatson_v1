@@ -39,7 +39,8 @@ class FilterButton(QToolButtonBase):
 
     def __init__(self, client=None):
         super().__init__('filters', 'small', None)
-        self.setPopupMode(self.InstantPopup)
+        # self.setPopupMode(self.InstantPopup)
+        self.setPopupMode(self.ToolButtonPopupMode.InstantPopup)
         self.client = client
         self.setup_menu()
 

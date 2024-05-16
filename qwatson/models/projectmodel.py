@@ -14,8 +14,8 @@
 # from PyQt5.QtCore import (QAbstractListModel, QModelIndex, Qt, QVariant)
 
 # Migrate to PySide6
-from PySide6.QtCore import Signal as QSignal            # <-- This may not work
-from PySide6.QtCore import QAbstractListModel, QModelIndex, Qt, QVariant
+from PySide6.QtCore import Signal as QSignal                            # <-- This may not work
+from PySide6.QtCore import QAbstractListModel, QModelIndex, Qt          #, QVariant # <-- QVariant was removed in PySide6
 
 # ---- Local imports
 
@@ -47,7 +47,8 @@ class WatsonProjectModel(QAbstractListModel):
         elif role == Qt.ToolTipRole:
             return self.client.projects[index.row()]
         else:
-            return QVariant()
+            # return QVariant()         # <-- QVariant was removed in PySide6, any python object can be returned
+            return None
 
     # ---- Utils
 

@@ -112,7 +112,8 @@ class InfoBox(ColoredFrame):
         info_scrollarea.setWidget(info_label)
         info_scrollarea.setWidgetResizable(True)
         info_scrollarea.setMinimumHeight(info_label.minimumHeight())
-        info_scrollarea.setFrameStyle(info_scrollarea.NoFrame)
+        # info_scrollarea.setFrameStyle(info_scrollarea.NoFrame)
+        info_scrollarea.setFrameStyle(0)        # <-- NoFrame is not defined in PySide6, just takes an int
 
         # Setup the layout of the info box.
 
