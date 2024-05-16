@@ -9,8 +9,12 @@
 
 # ---- Imports: third parties
 
-from PyQt5.QtGui import QColor, QPalette
-from PyQt5.QtWidgets import QStyleOption
+# from PyQt5.QtGui import QColor, QPalette
+# from PyQt5.QtWidgets import QStyleOption
+
+# Migration to PySide6
+from PySide6.QtGui import QColor, QPalette
+from PySide6.QtWidgets import QStyleOption
 
 
 def get_qcolor(*args):

@@ -10,8 +10,12 @@
 
 # ---- Third parties imports
 
-from PyQt5.QtCore import pyqtSignal as QSignal
-from PyQt5.QtCore import (QAbstractListModel, QModelIndex, Qt, QVariant)
+# from PyQt5.QtCore import pyqtSignal as QSignal
+# from PyQt5.QtCore import (QAbstractListModel, QModelIndex, Qt, QVariant)
+
+# Migrate to PySide6
+from PySide6.QtCore import Signal as QSignal            # <-- This may not work
+from PySide6.QtCore import QAbstractListModel, QModelIndex, Qt, QVariant
 
 # ---- Local imports
 

@@ -13,8 +13,13 @@ import sys
 # ---- Third party imports
 
 import arrow
-from PyQt5.QtCore import pyqtSignal as QSignal
-from PyQt5.QtWidgets import QApplication, QLabel
+# from PyQt5.QtCore import pyqtSignal as QSignal
+# from PyQt5.QtWidgets import QApplication, QLabel
+
+# Migrate to PySide6
+
+from PySide6.QtCore import Signal as QSignal
+from PySide6.QtWidgets import QApplication, QLabel
 
 # ---- Local imports
 

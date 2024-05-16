@@ -14,10 +14,15 @@ import sys
 # ---- Third party imports
 
 import arrow
-from PyQt5.QtCore import pyqtSignal as QSignal
-from PyQt5.QtCore import QTimer
-from PyQt5.QtWidgets import (QLCDNumber, QApplication, QGridLayout, QStyle,
-                             QStyleOptionToolButton)
+# from PyQt5.QtCore import pyqtSignal as QSignal
+# from PyQt5.QtCore import QTimer
+# from PyQt5.QtWidgets import (QLCDNumber, QApplication, QGridLayout, QStyle,
+#                              QStyleOptionToolButton)
+
+# Migration to PySide6
+from PySide6.QtCore import Signal as QSignal
+from PySide6.QtCore import QTimer
+from PySide6.QtWidgets import QLCDNumber, QApplication, QGridLayout, QStyle, QStyleOptionToolButton
 
 # ---- Local imports
 

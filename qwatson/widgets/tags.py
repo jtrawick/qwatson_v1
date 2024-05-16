@@ -9,7 +9,11 @@
 
 # ---- Third party imports
 
-from PyQt5.QtWidgets import QLineEdit
+# from PyQt5.QtWidgets import QLineEdit
+
+# Migrate to PySide6
+
+from PySide6.QtWidgets import QLineEdit
 
 
 class TagLineEdit(QLineEdit):

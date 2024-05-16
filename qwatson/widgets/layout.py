@@ -9,9 +9,15 @@
 
 # ---- Third party imports
 
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import (QApplication, QFrame, QGridLayout, QLabel,
-                             QScrollArea, QStyleOption, QVBoxLayout)
+# from PyQt5.QtCore import Qt
+# from PyQt5.QtWidgets import (QApplication, QFrame, QGridLayout, QLabel,
+#                              QScrollArea, QStyleOption, QVBoxLayout)
+
+# Migrate to PySide6
+
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QApplication, QFrame, QGridLayout, QLabel, QScrollArea, QVBoxLayout
+                             
 
 # ---- Local imports
 

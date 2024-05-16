@@ -12,11 +12,18 @@ import sys
 
 # ---- Imports: Third Parties
 
-from PyQt5.QtCore import pyqtSignal as QSignal
-from PyQt5.QtCore import QSize, Qt, QEvent
-from PyQt5.QtWidgets import (QApplication, QToolButton, QMenu, QListWidget,
-                             QStyle, QSizePolicy, QStyleOptionToolButton,
-                             QHBoxLayout)
+# from PyQt5.QtCore import pyqtSignal as QSignal
+# from PyQt5.QtCore import QSize, Qt, QEvent
+# from PyQt5.QtWidgets import (QApplication, QToolButton, QMenu, QListWidget,
+#                              QStyle, QSizePolicy, QStyleOptionToolButton,
+#                              QHBoxLayout)
+                             
+# Migrate to PySide6
+
+from PySide6.QtCore import Signal as QSignal
+from PySide6.QtCore import QSize, Qt, QEvent
+from PySide6.QtWidgets import QApplication, QToolButton, QMenu, QListWidget, QStyle, QSizePolicy, QStyleOptionToolButton, QHBoxLayout
+                        
 
 # ---- Local imports
 
@@ -259,7 +266,7 @@ if __name__ == '__main__':
     toolbar.addWidget(drop_down_btn)
     toolbar.addWidget(QToolButtonNormal('home'))
     toolbar.addWidget(None)
-    toolbar.addWidget(HistoryNavigationWidget('tiny'))
+    # toolbar.addWidget(HistoryNavigationWidget('tiny'))        # <-- This class was originally in this file, but removed with commit 3425966 on the main branch 2018-8-5
     toolbar.show()
 
     size = toolbar.style().sizeFromContents(

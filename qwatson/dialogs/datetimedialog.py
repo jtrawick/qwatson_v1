@@ -13,10 +13,15 @@ import sys
 # ---- Third party imports
 
 import arrow
-from PyQt5.QtCore import pyqtSlot as QSlot
-from PyQt5.QtCore import QDateTime, Qt
-from PyQt5.QtWidgets import (QApplication, QDateTimeEdit, QLabel, QVBoxLayout,
-                             QHBoxLayout, QPushButton)
+# from PyQt5.QtCore import pyqtSlot as QSlot
+# from PyQt5.QtCore import QDateTime, Qt
+# from PyQt5.QtWidgets import (QApplication, QDateTimeEdit, QLabel, QVBoxLayout,
+#                              QHBoxLayout, QPushButton)
+
+# Migrate to PySide6
+from PySide6.QtCore import Slot as QSlot                # <-- This may not work
+from PySide6.QtCore import QDateTime, Qt
+from PySide6.QtWidgets import QApplication, QDateTimeEdit, QLabel, QVBoxLayout, QHBoxLayout, QPushButton
 
 # ---- Local imports
 

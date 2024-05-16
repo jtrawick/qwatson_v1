@@ -14,12 +14,21 @@ from math import ceil
 # ---- Third party imports
 
 import arrow
-from PyQt5.QtCore import pyqtSignal as QSignal
-from PyQt5.QtCore import Qt, QPoint
-from PyQt5.QtGui import QCursor
-from PyQt5.QtWidgets import (
-    QApplication, QGridLayout, QHeaderView, QLabel, QMessageBox, QScrollArea,
-    QTableView, QHBoxLayout, QVBoxLayout, QWidget, QFrame)
+# from PyQt5.QtCore import pyqtSignal as QSignal
+# from PyQt5.QtCore import Qt, QPoint
+# from PyQt5.QtGui import QCursor
+# from PyQt5.QtWidgets import (
+#     QApplication, QGridLayout, QHeaderView, QLabel, QMessageBox, QScrollArea,
+#     QTableView, QHBoxLayout, QVBoxLayout, QWidget, QFrame)
+
+
+# Migrate to PySide6
+
+from PySide6.QtCore import Signal as QSignal
+from PySide6.QtCore import Qt, QPoint
+from PySide6.QtWidgets import QApplication, QGridLayout, QHeaderView, QLabel, QMessageBox, QScrollArea, QTableView, QHBoxLayout, QVBoxLayout, QWidget, QFrame
+from PySide6.QtGui import QCursor
+
 
 # ---- Local imports
 
@@ -653,7 +662,12 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
 
-    from PyQt5.QtWidgets import QStyleFactory
+    # from PyQt5.QtWidgets import QStyleFactory
+    
+    # Migration to PySide6
+    
+    from PySide6.QtWidgets import QStyleFactory
+    
     app.setStyle(QStyleFactory.create('WindowsVista'))
 
     overview_window = ActivityOverviewWidget(model)

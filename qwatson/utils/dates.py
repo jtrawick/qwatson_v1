@@ -15,8 +15,10 @@ from datetime import datetime
 # ---- Imports: third parties
 
 import arrow
-from PyQt5.QtCore import QDateTime
+# from PyQt5.QtCore import QDateTime
 
+# Migrate to PySide6
+from PySide6.QtCore import QDateTime
 
 def total_seconds_to_hour_min(total_seconds):
     """

@@ -11,11 +11,17 @@
 
 # ---- Third party imports
 
-from PyQt5.QtCore import pyqtSlot as QSlot
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import (QApplication, QDialogButtonBox,
-                             QVBoxLayout, QStyleOption, QPushButton,
-                             QAbstractButton)
+# from PyQt5.QtCore import pyqtSlot as QSlot
+# from PyQt5.QtCore import Qt
+# from PyQt5.QtWidgets import (QApplication, QDialogButtonBox,
+#                              QVBoxLayout, QStyleOption, QPushButton,
+#                              QAbstractButton)
+
+# Migrate to PySide6 imports
+from PySide6.QtCore import Slot as QSlot        # <-- This may be a problem
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QApplication, QDialogButtonBox, QVBoxLayout, QStyleOption, QPushButton, QAbstractButton
+
 
 # ---- Local imports
 

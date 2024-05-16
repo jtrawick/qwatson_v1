@@ -14,9 +14,13 @@ import datetime
 # ---- Third parties imports
 
 import arrow
-from PyQt5.QtCore import pyqtSignal as QSignal
-from PyQt5.QtCore import (QAbstractTableModel, QModelIndex,
-                          QSortFilterProxyModel, Qt, QVariant)
+# from PyQt5.QtCore import pyqtSignal as QSignal
+# from PyQt5.QtCore import (QAbstractTableModel, QModelIndex,
+#                           QSortFilterProxyModel, Qt, QVariant)
+
+# Migrate to PySide6
+from PySide6.QtCore import Signal as QSignal
+from PySide6.QtCore import QAbstractTableModel, QModelIndex, QSortFilterProxyModel, Qt, QVariant
 
 # ---- Local imports
 

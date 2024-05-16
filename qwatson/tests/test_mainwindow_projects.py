@@ -15,7 +15,11 @@ import os.path as osp
 
 import arrow
 import pytest
-from PyQt5.QtCore import Qt
+# from PyQt5.QtCore import Qt
+
+# Migration to PySide6
+from PySide6.QtCore import Qt
+
 
 # ---- Local imports
 

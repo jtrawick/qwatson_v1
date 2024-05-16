@@ -12,10 +12,16 @@ import sys
 
 # ---- Third party imports
 
-from PyQt5.QtCore import pyqtSignal as QSignal
-from PyQt5.QtCore import Qt, QEvent
-from PyQt5.QtWidgets import (QApplication, QGridLayout, QMessageBox, QWidget,
-                             QLineEdit, QComboBox)
+# from PyQt5.QtCore import pyqtSignal as QSignal
+# from PyQt5.QtCore import Qt, QEvent
+# from PyQt5.QtWidgets import (QApplication, QGridLayout, QMessageBox, QWidget,
+#                              QLineEdit, QComboBox)
+
+# Migrate to PySide6
+
+from PySide6.QtCore import Signal as QSignal
+from PySide6.QtCore import Qt, QEvent
+from PySide6.QtWidgets import QApplication, QGridLayout, QMessageBox, QWidget, QLineEdit, QComboBox
 
 # ---- Local imports
 

@@ -31,7 +31,8 @@ class Frame(namedtuple('Frame', HEADERS)):
             if not isinstance(stop, arrow.Arrow):
                 stop = arrow.get(stop)
         except RuntimeError as e:
-            from .watson import WatsonError
+            # from .watson import WatsonError
+            from watson import WatsonError              # <-- May have just been a typo
             raise WatsonError("Error converting date: {}".format(e))
 
         start = start.to('local')

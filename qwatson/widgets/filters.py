@@ -12,9 +12,16 @@ import sys
 
 # ---- Third party imports
 
-from PyQt5.QtCore import pyqtSignal as QSignal
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMenu, QWidgetAction, QCheckBox
+# from PyQt5.QtCore import pyqtSignal as QSignal
+# from PyQt5.QtCore import Qt
+# from PyQt5.QtWidgets import QMenu, QWidgetAction, QCheckBox
+
+# Migrate to PySide6
+
+from PySide6.QtCore import Signal as QSignal
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QMenu, QWidgetAction, QCheckBox
+
 
 # ---- Local imports
 
@@ -185,7 +192,11 @@ class FilterTagsMenu(FilterBaseMenu):
 
 
 if __name__ == '__main__':
-    from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout
+    # from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout
+
+    # Migrate to PySide6
+    from PySide6.QtWidgets import QApplication, QWidget, QGridLayout
+    
     from qwatson.watson_ext.watsonextends import Watson
 
     app = QApplication(sys.argv)

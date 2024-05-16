@@ -12,10 +12,17 @@ import os
 
 # ---- Imports: third parties
 
-from PyQt5.QtCore import QSize
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QStyle
-import qtawesome as qta
+# from PyQt5.QtCore import QSize
+# from PyQt5.QtGui import QIcon
+# from PyQt5.QtWidgets import QApplication, QStyle
+
+# Migrate to PySide6 imports
+from PySide6.QtCore import QSize
+from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QApplication, QStyle
+
+# Disable qtawesome for now including all references to it
+# import qtawesome as qta
 
 from qwatson import __rootdir__
 
@@ -56,7 +63,9 @@ def get_icon(name):
     """Return a QIcon from a specified icon name."""
     if name in FA_ICONS:
         args, kwargs = FA_ICONS[name]
-        return qta.icon(*args, **kwargs)
+        # Disable qtawesome for now
+        # return qta.icon(*args, **kwargs)
+        return None
     elif name in APP_ICONS:
         return QIcon(os.path.join(DIRNAME, APP_ICONS[name]))
     else:
@@ -95,7 +104,10 @@ def get_standard_iconsize(constant):
 if __name__ == '__main__':
     import sys
     from qwatson.widgets.toolbar import QToolButtonBase
-    from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QToolButton
+    # from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QToolButton
+
+    # Migrate to PySide6 imports
+    from PySide6.QtWidgets import QApplication, QWidget, QGridLayout, QToolButton
 
     app = QApplication(sys.argv)
 

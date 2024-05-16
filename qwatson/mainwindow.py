@@ -19,9 +19,12 @@ import json
 
 import click
 import arrow
-from PyQt5.QtCore import Qt, QModelIndex
-from PyQt5.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
-                             QSizePolicy, QWidget, QStackedWidget, QVBoxLayout)
+# from PyQt5.QtCore import Qt, QModelIndex
+# from PyQt5.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
+#                              QSizePolicy, QWidget, QStackedWidget, QVBoxLayout)
+# Migrate to PySide6 imports
+from PySide6.QtCore import Qt, QModelIndex
+from PySide6.QtWidgets import QApplication, QGridLayout, QLabel, QLineEdit, QSizePolicy, QWidget, QStackedWidget, QVBoxLayout
 
 # ---- Local imports
 

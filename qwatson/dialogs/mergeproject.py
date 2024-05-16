@@ -12,7 +12,11 @@ import sys
 
 # ---- Third party imports
 
-from PyQt5.QtWidgets import (QApplication, QVBoxLayout, QPushButton)
+# from PyQt5.QtWidgets import (QApplication, QVBoxLayout, QPushButton)
+
+# Migration to PySide6
+from PySide6.QtWidgets import QApplication, QVBoxLayout, QPushButton
+
 
 # ---- Local imports
 

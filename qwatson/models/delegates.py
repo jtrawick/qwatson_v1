@@ -8,11 +8,16 @@
 
 # ---- Third parties imports
 
-from PyQt5.QtCore import QEvent, QRect, QPoint, Qt
-from PyQt5.QtGui import QPalette
-from PyQt5.QtWidgets import (
-    QApplication, QComboBox, QDateTimeEdit, QLineEdit, QStyle,
-    QStyledItemDelegate, QStyleOptionToolButton, QListView)
+# from PyQt5.QtCore import QEvent, QRect, QPoint, Qt
+# from PyQt5.QtGui import QPalette
+# from PyQt5.QtWidgets import (
+#     QApplication, QComboBox, QDateTimeEdit, QLineEdit, QStyle,
+#     QStyledItemDelegate, QStyleOptionToolButton, QListView)
+
+# Migrate to PySide6
+from PySide6.QtCore import QEvent, QRect, QPoint, Qt
+from PySide6.QtGui import QPalette
+from PySide6.QtWidgets import QApplication, QComboBox, QDateTimeEdit, QLineEdit, QStyle, QStyledItemDelegate, QStyleOptionToolButton, QListView
 
 # ---- Local imports
 
